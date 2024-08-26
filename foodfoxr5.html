@@ -1,0 +1,248 @@
+<html>
+    <head>
+        <title>
+            FoodFox
+        </title>
+        <style>
+            * {
+                background-color: black;
+            }
+
+            #rest {
+                margin-top : 40px;
+                margin-left: 90px;
+                font-size : 30px;
+                color : white;
+                background-color: #915f6d;
+                width : 65px;
+                height: 40px;
+                padding-left : 10;
+                padding-right: 10;
+                padding-top: 10;
+                padding-bottom: 10;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-weight : lighter;
+            }
+
+            #angled {
+                position: absolute;
+                top: 88.5;
+                left: 181;
+                border-bottom: 0px solid #915f6d;
+                width: 37;
+                transform: rotate(-28deg);
+                transform-origin: top left  ;
+            }
+
+            .triangle-right {
+                position: absolute;
+                top: 40;
+                left: 178;
+                height: 20px;
+                width: 40px;
+                border-top: 20px solid transparent;
+                border-bottom: 20px solid transparent;
+                border-left: 40px solid #915f6d;
+                border-right: 0px solid transparent;
+                background-color: black;
+            }
+
+            #horiz {
+                position: absolute;
+                left: 105;
+                top: 88;
+                width : 74px;
+                border-color: #915f6d;
+            }
+
+            #horzstyle1 {
+                position : absolute;
+                bottom: 10px;
+                left: 12.7px;
+                border-color: #d4af37;
+                width: 95%;
+            }
+
+            #vertstyle1 {
+                position : absolute;
+                top: 20px;
+                left: 20px;
+                border-color: #d4af37;
+                width: 46.8%;
+                transform: rotate(90deg);
+                transform-origin: top left  ;
+            }
+
+            #horzstyle2 {
+                position : absolute;
+                bottom: 3px;
+                left: 19.7px;
+                border-color: #d4af37;
+                width: 95%;
+            }
+
+            #vertstyle2 {
+                position : absolute;
+                top: 13px;
+                left: 13px;
+                border-color: #d4af37;
+                width: 46.8%;
+                transform: rotate(90deg);
+                transform-origin: top left  ;
+            }
+
+            img#logo {
+                position: absolute;
+                top: 25;
+                right: 100;
+            }
+
+            .pinkbox {
+                height: 156px;
+                width: 156px;
+                background-color:black;
+                border: 1px solid #915f6d;
+                border-radius: 5px;
+                position: absolute;
+                top: 300;
+                left: 300;
+                padding-left: 6;
+                padding-top: 6;
+            }
+
+            .R01F01 {
+                background-color: #915f6d;
+                color: white;
+                position: relative;
+                top: 13;
+                left: -5;
+                font-size: 20px;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                text-align: center;
+                width: 160px;
+                height: 25px;
+                border-radius: 5px;
+            }
+
+            .BADD {
+                background-color: black;
+                color:#d4af37;
+                border: 0.5px solid #d4af37;
+                position: relative;
+                top: 17;
+                left: 25;
+                font-size: 18px;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                text-align: center;
+                width: 100px;
+                height: 25px;
+                border-radius: 5px;
+            }
+
+            .buttons {
+                background-color: #915f6d;
+                border-radius: 5px;
+                position: absolute;
+                bottom: 70;
+                right: 70;
+                width: 151px;
+                height: 38px;
+                padding-left: 1;
+                padding-top: 1;
+            }
+            .buttons button {
+                background-color: #915f6d;
+                border-radius: 5px;
+                width: 150px;
+                height: 37px;
+            }
+            .buttons button a {
+                color: white;
+                background-color: #915f6d;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 25px;
+                text-decoration: none;
+            }
+
+
+        </style>
+    </head>
+        
+    <body>
+        <div id = "rest">
+             K F C
+            <div class="triangle-right"></div>
+            <img style = "float: right" id = "logo" src = "images/logo.png" height = "125px" />
+            <hr id = "horiz">
+            <hr id = "angled">
+            <hr id="horzstyle1">
+            <hr id = "vertstyle1">
+            <hr id="horzstyle2">
+            <hr id = "vertstyle2">
+
+            <div class = "pinkbox" id = "F01" style = "top: 150; left: 100">
+                <img src = "images/R05F01.png" height = "150px">
+                <div class = "R01F01"> Mingles Bucket </div>
+                <button class = "BADD" id = "B01" >A D D</button>
+            </div>
+
+            <div class = "pinkbox" id = "F02" style = "top: 150; left: 300">
+                <img src = "images/R05F02.png" height = "150px">
+                <div class = "R01F01"> Duo Bucket Meal </div>
+                <button class = "BADD" id = "B02">A D D</button>
+            </div>
+
+            <div class = "pinkbox" id = "F03" style = "top: 150; left: 500">
+                <img src = "images/R05F03.png" height = "150px">
+                <div class = "R01F01"> Dips Bucket </div>
+                <button class = "BADD" id = "B03">A D D</button>
+            </div>
+
+            <div class = "pinkbox" id = "F04" style = "top: 150; left: 700">
+                <img src = "images/R05F04.png" height = "150px">
+                <div class = "R01F01"> Big 8 </div>
+                <button class = "BADD" id = "B04">A D D</button>
+            </div>
+
+            <div class = "pinkbox" id = "F05" style = "top: 150; left: 900">
+                <img src = "images/R05F05.png" height = "150px">
+                <div class = "R01F01"> Chick & Share </div>
+                <button class = "BADD" id = "B05">A D D</button>
+            </div>
+
+            <div class = "pinkbox" id = "F06" style = "top: 400; left: 100">
+                <img src = "images/R05F06.png" height = "150px">
+                <div class = "R01F01"> Friend Bucket </div>
+                <button class = "BADD" id = "B06" >A D D</button>
+            </div>
+
+            <div class = "pinkbox" id = "F07" style = "top: 400; left: 300">
+                <img src = "images/R05F07.png" height = "150px">
+                <div class = "R01F01"> Triple Treat </div>
+                <button class = "BADD" id = "B07">A D D</button>
+            </div>
+
+            <div class = "pinkbox" id = "F08" style = "top: 400; left: 500">
+                <img src = "images/R05F08.png" height = "150px">
+                <div class = "R01F01"> Chicken Popcorn </div>
+                <button class = "BADD" id = "B08">A D D</button>
+            </div>
+
+            <div class = "pinkbox" id = "F09" style = "top: 400; left: 700">
+                <img src = "images/R05F09.png" height = "150px">
+                <div class = "R01F01"> Ultimate Bucket </div>
+                <button class = "BADD" id = "B09">A D D</button>
+            </div>
+
+            <div class = "pinkbox" id = "F10" style = "top: 400; left: 900">
+                <img src = "images/R05F10.png" height = "150px">
+                <div class = "R01F01"> Chicken Zinger </div>
+                <button class = "BADD" id = "B10">A D D</button>
+            </div>
+            <div class = "buttons" style = "bottom: 120">
+                <button><a href = "foodfox.html"> H O M E </a></button>
+            </div>
+            <div class = "buttons">
+                <button><a href = "foodfoxcart.html"> C A R T </a></button>
+            </div>
+        </div>

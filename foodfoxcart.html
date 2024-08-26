@@ -1,0 +1,425 @@
+<html>
+    <head>
+        <title>
+            FoodFox
+        </title>
+        <style>
+            * {
+                background-color: black;
+            }
+
+            #toprest {
+                margin-top : 40px;
+                margin-left: 90px;
+                font-size : 30px;
+                color : white;
+                background-color: #915f6d;
+                width : 100px;
+                height: 40px;
+                padding-left : 10;
+                padding-right: 10;
+                padding-top: 10;
+                padding-bottom: 10;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-weight : lighter;
+            }
+
+            img#logo {
+                position: absolute;
+                top: 25;
+                right: 100;
+            }
+
+            #horzstyle1 {
+                position : absolute;
+                bottom: 10px;
+                left: 12.7px;
+                border-color: #d4af37;
+                width: 95%;
+            }
+
+            #vertstyle1 {
+                position : absolute;
+                top: 20px;
+                left: 20px;
+                border-color: #d4af37;
+                width: 47.8%;
+                transform: rotate(90deg);
+                transform-origin: top left  ;
+            }
+
+            #horzstyle2 {
+                position : absolute;
+                bottom: 3px;
+                left: 19.7px;
+                border-color: #d4af37;
+                width: 95%;
+            }
+
+            #vertstyle2 {
+                position : absolute;
+                top: 13px;
+                left: 13px;
+                border-color: #d4af37;
+                width: 47.8%;
+                transform: rotate(90deg);
+                transform-origin: top left  ;
+            }
+
+            #angled {
+                position: absolute;
+                top: 88.5;
+                left: 216;
+                border-bottom: 0px solid #915f6d;
+                width: 37;
+                transform: rotate(-28deg);
+                transform-origin: top left  ;
+            }
+
+            .triangle-right {
+                position: absolute;
+                top: 40;
+                left: 213;
+                height: 20px;
+                width: 40px;
+                border-top: 20px solid transparent;
+                border-bottom: 20px solid transparent;
+                border-left: 40px solid #915f6d;
+                border-right: 0px solid transparent;
+                background-color: black;
+            }
+
+            #horiz {
+                position: absolute;
+                left: 105;
+                top: 88;
+                width : 109px;
+                border-color: #915f6d;
+            }
+
+            button.taskbar {
+                position : absolute;
+                bottom : 35;
+                background-color: #915f6d;
+                font-weight: lighter;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                float: left;
+                width: 300px;
+                height: 50px;
+                text-align: center;
+            }
+
+            button#home {
+                left: 40;
+                padding-left: 100px;
+            }
+
+            button#account {
+                left: 355;
+                padding-left: 85px;
+            }
+
+            button#cart {
+                left: 670;
+                padding-left: 110px;
+            }
+
+            button#logout {
+                right: 80;
+                padding-left: 95px;
+            }
+
+            button#home :hover {
+                background-color: white;
+                color: #915f6d;
+            }
+
+            button#account :hover {
+                background-color: white;
+                color: #915f6d;
+            }
+
+            button#cart :hover {
+                background-color: white;
+                color: #915f6d;
+            }
+
+            button#logout :hover {
+                background-color: white;
+                color: #915f6d;
+            }
+
+            #confirm {
+                position : absolute;
+                bottom : 40;
+                right: 30;
+                background-color: #915f6d;
+                border-radius: 10px;
+                width: 300px;
+                height: 50px;
+                text-align: center;
+                color: white;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-weight: lighter;
+                text-decoration: none;
+                font-size: 20px;
+            }
+
+            button a {
+                display: block;
+                text-decoration: none;
+                text-align: center;
+                color: white;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 25px;
+                background-color: #915f6d;
+                font-weight: lighter;
+                width: 295;
+                height: 44;
+                border-radius: 10px;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                padding-top: 8px;
+            }
+
+            #foodtable {
+                color:#915f6d;
+                font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 25px;
+                width: 650px;
+                position: absolute;
+                top: 150;
+                left: 100;
+                border: 0.5px solid #d4af37;
+                border-radius: 20px;
+            }
+
+            #foodtable tr {
+                color:#d4af37;
+                text-align: center;
+                font-size: 15px;
+                height: 35px;
+            }
+
+            #foodtable th {
+                color:#915f6d;
+                font-size: 20px;
+                text-align: center;
+                height: 50px;
+                border-bottom: 0.5px solid #d4af37;
+                border-radius: 20px;
+            }
+
+            #location {
+                color: white;
+                position: absolute;
+                top: 175;
+                right: 100;
+                color: white;
+                background-color: #915f6d;
+            }
+
+            .dropbtn {
+                background-color: #333333;
+                color:#d4af37;
+                padding: 16px;
+                font-size: 16px;
+                width: 160px;
+                height: 20px;
+                border: none;
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+                background-color: #333333;
+            }
+
+
+            .dropdown {
+                position: absolute;
+                right: 0px;
+                top: 35px;
+                display: inline-block;
+                color: white;
+                background-color: #333333;
+                padding-bottom: 20;
+                border: 0.5px solid #d4af37;
+
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                min-width: 160px;
+                z-index: 1;
+                padding-top: 10;
+                border: 0.5px solid #d4af37;
+
+            }
+
+            .dropdown-content div {
+                text-align: center;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 15px;
+                height: 25px;
+                color: white;
+                background-color: black;
+            }
+
+            #locheading {
+                color:#d4af37;
+                font-size: 20px;
+                width: 250px;
+                position: absolute;
+                top: 0;
+                right: -58;
+            }
+
+            #side {
+                background-color:black;
+                border: 0.5px solid #d4af37;
+                border-radius: 5px;
+                position: absolute;
+                top: 150;
+                right: 210;
+                width: 340px;
+                height: 379px;
+                padding-top: 10;
+                padding-left: 10;
+                padding-right: 10;
+                padding-bottom: 10;
+            }
+
+            #right {
+                background-color:rgba(145,94,109,0.7);
+                border: 0.5px solid #d4af37;
+                border-radius: 5px;
+                position: absolute;
+                top: 55;
+                right: 20;
+                width: 320px;
+                height: 50px;
+                padding-top: 10;
+                padding-left: 10;
+                padding-right: 10;
+                padding-bottom: 10;
+            }
+
+            #right tr {
+                background-color: rgba(145,94,109,0.7);
+                border: 0.5px solid #d4af37;
+                border-radius: 5px;
+                color:#d4af37;
+                font-size: 20px;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                width: 300px;
+                height: 30px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div id = "toprest">
+            C A R T
+            <div class="triangle-right"></div>
+            <hr id = "horiz">
+            <hr id = "angled">
+        </div>
+        <button class = "taskbar" id = "home"><a href = "foodfox.html"> h o m e </a></button>
+        <button class = "taskbar" id = "account"><a href = "foodfoxaccount.html"> a c c o u n t </a></button>
+        <button class = "taskbar" id = "cart"><a href = "" style="background-color: white; color: #915f6d;"> c a r t </a></button>
+        <button class = "taskbar" id = "logout"><a href = "foodfoxlogin.html"> l o g   o u t </a></button>
+        <img style = "float: right" id = "logo" src = "images/logo.png" height = "125px" />
+        <hr id="horzstyle1">
+        <hr id = "vertstyle1">
+        <hr id="horzstyle2">
+        <hr id = "vertstyle2">
+
+        <table id="foodtable" rules = "cols" style = "border-radius: 10px">
+            <th> S. N O. </th>
+            <th> I T E M </th>
+            <th> A M O U N T </th>
+            <tr>
+                <td> 1. </td>
+                <td> Food Item 1 </td>
+                <td> 200.00 </td>
+            </tr>
+            <tr>
+                <td> 2. </td>
+                <td> Food Item 2 </td>
+                <td> 200.00 </td>
+            </tr>
+            <tr>
+                <td> 3. </td>
+                <td> Food Item 3 </td>
+                <td> 200.00 </td>
+            </tr>
+            <tr>
+                <td> 4. </td>
+                <td> Food Item 4 </td>
+                <td> 200.00 </td>
+            </tr>
+            <tr>
+                <td> 5. </td>
+                <td> Food Item 5 </td>
+                <td> 200.00 </td>
+            </tr>
+            <tr>
+                <td> 6. </td>
+                <td> Food Item 6 </td>
+                <td> 200.00 </td>
+            </tr>
+            <tr>
+                <td> 7. </td>
+                <td> Food Item 7 </td>
+                <td> 200.00 </td>
+            </tr>
+            <tr>
+                <td> 8. </td>
+                <td> Food Item 8 </td>
+                <td> 200.00 </td>
+            </tr>
+            <tr>
+                <td> 9. </td>
+                <td> Food Item 9 </td>
+                <td> 200.00 </td>
+            </tr>
+            <tr>
+                <td> 10. </td>
+                <td> Food Item 10 </td>
+                <td> 200.00 </td>
+            </tr>
+        </table>
+
+        <div id="side">
+            <table id="right">
+                <tr>
+                    <td style="background-color: rgba(145,94,109,0.01); text-align: right;"> Restaurant : </td>
+                    <td style="background-color: rgba(145,94,109,0.01); text-align: center;"> P I Z Z A   H U T </td>
+                </tr>
+                <tr>
+                    <td style="background-color: rgba(145,94,109,0.01); text-align: right;"> Final Amount : </td>
+                    <td style="background-color: rgba(145,94,109,0.01); text-align: center;"> Rs. 800.0 </td>
+                </tr>
+            </table>
+            <div id="location" style="color: white">
+                <div id="locheading"> Choose Delivery Location</div>
+                <div class="dropdown">
+                    <button class="dropbtn">Location</button>
+                    <div class="dropdown-content" style="background-color:#333333">
+                     <div style="background-color:#333333">Thangassery</div>
+                     <div style="background-color:#333333">Karikode</div>
+                     <div style="background-color:#333333">Polayathode</div>
+                     <div style="background-color:#333333">Town Limit</div>
+                     <div style="background-color:#333333">Kadappakada</div>
+                     <div style="background-color:#333333">Chinnakada</div>
+                    </div>
+                </div>
+            </div>
+            <button id="confirm"><a href="foodfox.html">C O N F I R M</a></button>
+        </div>
+    </body>

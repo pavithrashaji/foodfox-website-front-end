@@ -1,0 +1,187 @@
+<html>
+    <head>
+        <title>
+            FoodFox
+        </title>
+        <style>
+            * {
+                background-color: black;
+            }
+
+            #login {
+                position: absolute;
+                top: 0;
+                left: 0;
+
+            }
+            #loginbutton a {
+                background-color: #915f6d;
+                font-size: 22px;
+                font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                border-radius: 10px;
+                position: absolute;
+                font-weight: lighter;
+                top: 450;
+                right: 430;
+                color: white;
+                text-decoration: none;
+                width: 150px;
+                height: 35px;
+                padding-top: 8;
+
+            }
+
+            #signupbutton a {
+                background-color: #915f6d;
+                font-size: 17px;
+                font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                border-radius: 10px;
+                position: absolute;
+                font-weight: lighter;
+                top: 555;
+                right: 370;
+                color: white;
+                text-decoration: none;
+                width: 100px;
+                height: 25px;
+                padding-top: 5;
+
+            }
+
+            #title {
+                position: absolute;
+                color: #d4af37;
+                font-size: 40px;
+                font-weight: normal;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                text-align: center;
+                top: 180;
+                right: 450;
+            }
+
+            #user {
+                position: absolute;
+                top: 272;
+                right: 360;
+                background-color: #333333;
+                border-radius: 6px;
+                height: 30px;
+            }
+
+            #pass {
+                position: absolute;
+                top: 318.5;
+                right: 360;
+                background-color: #333333;
+                border-radius: 6px;
+                height: 30px;
+            }
+
+            #remember {
+                position: absolute;
+                color: #d4af37;
+                font-size: 17px;
+                font-weight: normal;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                text-align: center;
+                top: 390;
+                right: 440;
+            }
+
+            .details {
+                position: absolute;
+                color: #d4af37;
+                font-size: 23px;
+                font-weight: normal;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                text-align: center;
+                top: 271;
+                right: 560;
+            }
+
+            #bbox {
+                position: absolute;
+                width: 450px;
+                border-color:#d4af37;
+                top: 522; 
+                right: 277;
+            }
+
+            #lbox {
+                position: absolute;
+                width: 380px;
+                border-color:#d4af37;
+                top: 140;
+                right: 347;
+                transform: rotate(90deg);
+                transform-origin: bottom left;
+            }
+
+            #tbox {
+                position: absolute;
+                width: 450px;
+                border-color:#d4af37;
+                top: 140;
+                right: 277;
+            }
+
+            #rbox {
+                position: absolute;
+                width: 380px;
+                border-color:#d4af37;
+                top: 145;
+                right: -109;
+                transform: rotate(90deg);
+                transform-origin: bottom left;
+            }
+
+            #bshadow {
+                position: absolute;
+                width: 450px;
+                border-color:#d4af37;
+                top: 527;
+                right: 272;
+            }
+
+            #rshadow {
+                position: absolute;
+                width: 380px;
+                border-color:#d4af37;
+                top: 140;
+                right: -104;
+                transform: rotate(90deg);
+                transform-origin: bottom left;
+            }
+
+            #check {
+                position: absolute;
+                top: 391;
+                right: 552;
+            }
+  
+        </style>
+    </head>
+
+    <body>
+        <img id = "login" src = "images/fflogin.png" height = "695">
+        <div id = "title">Log In</div>
+        <hr id = "bbox">
+        <hr id = "rbox">
+        <hr id = "lbox">
+        <hr id = "tbox">
+        <hr id = "rshadow">
+        <hr id = "bshadow">
+        <input id = "check" type = "checkbox">
+        <div class = "details">Username</div>
+        <input id = "user" type = "text" name = "username" placeholder = "   Enter Username">
+        <div class = "details" style = "top: 321 ">Password</div>
+        <input id = "pass" type = "password" name = "password" placeholder = "   Enter Password">
+        <div id = "remember">Remember me</div>
+        <button id = "loginbutton">
+            <a href="foodfox.html" style = "background-color: #915f6d;">LOG IN</a>
+        </button>
+        <div id = "remember" style = "top: 558; right: 490">Not a member?</div>
+        <button id = "signupbutton">
+            <a href="foodfoxsignup.html" style = "background-color: #915f6d;">SIGN UP</a>
+        </button>
+    </body>

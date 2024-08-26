@@ -1,0 +1,379 @@
+<html>
+    <head>
+        <title>
+            FoodFox
+        </title>
+        <style>
+            * {
+                background-color: black;
+            }
+
+            img#logo {
+                position: absolute;
+                top: 25;
+                right: 100;
+            }
+
+            #hello {
+                background-color: black;
+                border: 0.5px solid #915f6d;
+                border-radius: 10px;
+                width : 285px;
+                height: 70px;
+                position: absolute;
+                left: 220;
+                top: 87;
+            }
+
+            #subhello {
+                font-size : 30px;
+                color : white;
+                background-color: #915f6d;
+                border-radius: 6px;
+                width : 255px;
+                height: 40px;
+                padding-left : 10;
+                padding-right: 10;
+                padding-top: 10;
+                padding-bottom: 10;
+                position: absolute;
+                left: 5;
+                top: 5;
+                font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-weight : lighter;
+            }
+
+            #horzstyle1 {
+                position : absolute;
+                bottom: 10px;
+                left: 12.7px;
+                border-color: #d4af37;
+                width: 95%;
+            }
+
+            #vertstyle1 {
+                position : absolute;
+                top: 20px;
+                left: 20px;
+                border-color: #d4af37;
+                width: 47.8%;
+                transform: rotate(90deg);
+                transform-origin: top left  ;
+            }
+
+            #horzstyle2 {
+                position : absolute;
+                bottom: 3px;
+                left: 19.7px;
+                border-color: #d4af37;
+                width: 95%;
+            }
+            
+            #vertstyle2 {
+                position : absolute;
+                top: 13px;
+                left: 13px;
+                border-color: #d4af37;
+                width: 47.8%;
+                transform: rotate(90deg);
+                transform-origin: top left;
+            }
+
+            button.taskbar {
+                position : absolute;
+                bottom : 35;
+                background-color: #915f6d;
+                font-weight: lighter;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                float: left;
+                width: 300px;
+                height: 50px;
+                text-align: center;
+            }
+
+            button#home {
+                left: 40;
+                padding-left: 100px;
+            }
+
+            button#account {
+                left: 355;
+                padding-left: 85px;
+            }
+
+            button#cart {
+                left: 670;
+                padding-left: 110px;
+            }
+
+            button#logout {
+                right: 80;
+                padding-left: 95px;
+            }
+
+            button#home :hover {
+                background-color: white;
+                color: #915f6d;
+            }
+
+            button#account :hover {
+                background-color: white;
+                color: #915f6d;
+            }
+
+            button#cart :hover {
+                background-color: white;
+                color: #915f6d;
+            }
+
+            button#logout :hover {
+                background-color: white;
+                color: #915f6d;
+            }
+
+            button a {
+                display: block;
+                text-decoration: none;
+                text-align: center;
+                color: white;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 25px;
+                background-color: #915f6d;
+                font-weight: lighter;
+                width: 295;
+                height: 44;
+                border-radius: 10px;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                padding-top: 8px;
+            }
+            
+            #foodtable {
+                color:#915f6d;
+                font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 15px;
+                width: 350px;
+                position: absolute;
+                bottom: 15;
+                left: 25;
+                border: 0.5px solid #d4af37;
+                border-radius: 5px;
+            }
+
+            #foodtable tr {
+                color:#915f6d;
+                text-align: center;
+                font-size: 13.5px;
+                height: 23.5px;
+            }
+
+            #foodtable th {
+                color:#d4af37;
+                font-size: 15px;
+                text-align: center;
+                height: 25px;
+            }
+
+            img#header {
+                background-color: sblack;
+                border: 0.5px solid #915f6d;
+                border-radius: 5px;
+                width: 100px;
+                position: absolute;
+                top: 70;
+                left: 100;
+            }
+
+            #userdetails {
+                color:#d4af37;
+                border: 0.5px solid #d4af37;
+                border-radius: 10px;
+                position: absolute;
+                top: 240;
+                left: 100;
+            }
+
+            #userdetails td {
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 20px;
+                width: 345px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            #right {
+                background-color: black;
+                border: 0.5px solid #d4af37;
+                border-radius: 10px;
+                position: absolute;
+                top: 169;
+                left: 670;
+                width: 400;
+                height: 390;
+            }
+
+            #restdetails {
+                color:#d4af37;
+                background-color: rgba(145,94,109,0.7);
+                border: 0.5px solid #d4af37;
+                border-radius: 10px;
+                position: absolute;
+                top: 15;
+                left: 25;
+                width: 350px;
+                padding-top: 7px;
+                padding-bottom: 7px;
+            }
+
+            #restdetails td {
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 17px;
+                background-color: rgba(145,94,109,0.7);
+                width: 245px;
+            }
+
+            .account1 {
+                color:#915f6d;
+                transform: rotate(-90deg);
+                transform-origin: top left;
+                position: absolute;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 20px;
+            }
+
+            .account2 {
+                color:#915f6d;
+                transform: rotate(90deg);
+                transform-origin: top left;
+                position: absolute;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 23px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <button class = "taskbar" id = "home"><a href = "foodfox.html"> h o m e </a></button>
+        <button class = "taskbar" id = "account"><a href = "" style="background-color: white; color: #915f6d;"> a c c o u n t </a></button>
+        <button class = "taskbar" id = "cart"><a href = "foodfoxcart.html"> c a r t </a></button>
+        <button class = "taskbar" id = "logout"><a href = "foodfoxlogin.html"> l o g   o u t </a></button>
+        <img style = "float: right" id = "logo" src = "images/logo.png" height = "125px" />
+        <hr id="horzstyle1">
+        <hr id = "vertstyle1">
+        <hr id="horzstyle2">
+        <hr id = "vertstyle2">
+        <div id="profile">
+            <img id="header" src="images/emptyicon.png" height="100px">
+            <div id="hello">
+                <div id="subhello">Hello, Pavithra Shaji </div>
+            </div>
+        </div>
+        <div class="account1" style="top: 490; left: 70;"> A C C O U N T</div>
+        <div class="account1" style="top: 360; left: 70;">D E T A I L S </div>
+        <table id="userdetails">
+            <tr>
+                <td style="text-align:right;width: 150px;"> First Name : </td>
+                <td style="text-align:center"> Pavithra </td>
+            </tr>
+            <tr>
+                <td style="text-align:right;width: 150px;"> Last Name : </td>
+                <td style="text-align:center"> Shaji </td>
+            </tr>
+            <tr>
+                <td style="text-align:right;width: 150px;"> Username : </td>
+                <td style="text-align:center"> pavi </td>
+            </tr>
+            <tr>
+                <td style="text-align:right;width: 150px;"> Contact No : </td>
+                <td style="text-align:center"> 1234567890 </td>
+            </tr>
+            <tr>
+                <td style="text-align:right;width: 150px;"> E-Mail : </td>
+                <td style="text-align:center"> pavi@gmail.com </td>
+            </tr>
+            <tr>
+                <td style="text-align:right;width: 150px;"> Location : </td>
+                <td style="text-align:center"> Town Limit </td>
+            </tr>
+        </table>
+        <div id="right">
+            <table id="restdetails">
+                <tr>
+                    <td style="text-align:right;width: 150px;"> Restaurant : </td>
+                    <td style="text-align:center"> P I Z Z A   H U T </td>
+                </tr>
+                <tr>
+                    <td style="text-align:right;width: 150px;"> Final Amount : </td>
+                    <td style="text-align:center"> Rs. 880.0 </td>
+                </tr>
+                <tr>
+                    <td style="text-align:right;width: 150px;"> Delivered to : </td>
+                    <td style="text-align:center"> Thangassery </td>
+                </tr>
+            </table>
+            
+            <div class="account2" style="top: 100; right: -100;"> P A S T </div>
+            <div class="account2" style="top: 185; right: -124;"> O R D E R </div>
+
+            <table id="foodtable" rules = "cols" style = "border-radius: 10px">
+                <th> N O </th>
+                <th> I T E M </th>
+                <th> A M O U N T </th>
+                <tr>
+                    <td> 1. </td>
+                    <td> Food Item 1 </td>
+                    <td> 200.00 </td>
+                </tr>
+                <tr>
+                    <td> 2. </td>
+                    <td> Food Item 2 </td>
+                    <td> 200.00 </td>
+                </tr>
+                <tr>
+                    <td> 3. </td>
+                    <td> Food Item 3 </td>
+                    <td> 200.00 </td>
+                </tr>
+                <tr>
+                    <td> 4. </td>
+                    <td> Food Item 4 </td>
+                    <td> 200.00 </td>
+                </tr>
+                <tr>
+                    <td> 5. </td>
+                    <td> Food Item 5 </td>
+                    <td> 200.00 </td>
+                </tr>
+                <tr>
+                    <td> 6. </td>
+                    <td> Food Item 6 </td>
+                    <td> 200.00 </td>
+                </tr>
+                <tr>
+                    <td> 7. </td>
+                    <td> Food Item 7 </td>
+                    <td> 200.00 </td>
+                </tr>
+                <tr>
+                    <td> 8. </td>
+                    <td> Food Item 8 </td>
+                    <td> 200.00 </td>
+                </tr>
+                <tr>
+                    <td> 9. </td>
+                    <td> Food Item 9 </td>
+                    <td> 200.00 </td>
+                </tr>
+                <tr>
+                    <td> 10. </td>
+                    <td> Food Item 10 </td>
+                    <td> 200.00 </td>
+                </tr>
+            </table>
+    
+        </div>
+    </body>

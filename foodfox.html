@@ -1,0 +1,409 @@
+<html>
+    <head>
+        <title>
+            FoodFox
+        </title>
+        <style>
+            * {
+                background-color: black;
+            }
+
+            #toprest {
+                margin-top : 40px;
+                margin-left: 90px;
+                font-size : 30px;
+                color : white;
+                background-color: #915f6d;
+                width : 375px;
+                height: 40px;
+                padding-left : 10;
+                padding-right: 10;
+                padding-top: 10;
+                padding-bottom: 10;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-weight : lighter;
+            }
+
+            img#logo {
+                position: absolute;
+                top: 25;
+                right: 100;
+            }
+
+            #horiz {
+                position: absolute;
+                left: 105;
+                top: 88;
+                width : 384px;
+                border-color: #915f6d;
+            }
+
+            #horzstyle1 {
+                position : absolute;
+                bottom: 10px;
+                left: 12.7px;
+                border-color: #d4af37;
+                width: 95%;
+            }
+
+            #vertstyle1 {
+                position : absolute;
+                top: 20px;
+                left: 20px;
+                border-color: #d4af37;
+                width: 47.8%;
+                transform: rotate(90deg);
+                transform-origin: top left  ;
+            }
+
+            #horzstyle2 {
+                position : absolute;
+                bottom: 3px;
+                left: 19.7px;
+                border-color: #d4af37;
+                width: 95%;
+            }
+
+            #test1 {
+                position: absolute;
+                width: 156px;
+                border-color:#915f6d;
+                top: 157;
+                left: 12;
+            }
+
+            #test2 {
+                position: absolute;
+                width: 156px;
+                border-color:#915f6d;
+                top: -3;
+                left: 169;
+                transform: rotate(90deg);
+                transform-origin: bottom left;
+            }
+
+            #test3 {
+                position: absolute;
+                width: 156px;
+                border-color:#915f6d;
+                top: 161;
+                left: 16;
+            }
+
+            #test4 {
+                position: absolute;
+                width: 156px;
+                border-color:#915f6d;
+                top: 1;
+                left: 173;
+                transform: rotate(90deg);
+                transform-origin: bottom left;
+            }
+            
+            #bbox {
+                position: absolute;
+                width: 340px;
+                border-color:#d4af37;
+                top: 512;
+                right: 117;
+            }
+
+            #lbox {
+                position: absolute;
+                width: 340px;
+                border-color:#d4af37;
+                top: 170;
+                right: 117;
+                transform: rotate(90deg);
+                transform-origin: bottom left;
+            }
+
+            #tbox {
+                position: absolute;
+                width: 340px;
+                border-color:#d4af37;
+                top: 170;
+                right: 117;
+            }
+
+            #rbox {
+                position: absolute;
+                width: 340px;
+                border-color:#d4af37;
+                top: 175;
+                right: -229;
+                transform: rotate(90deg);
+                transform-origin: bottom left;
+            }
+
+            #bshadow {
+                position: absolute;
+                width: 340px;
+                border-color:#d4af37;
+                top: 517;
+                right: 112;
+            }
+
+            #rshadow {
+                position: absolute;
+                width: 340px;
+                border-color:#d4af37;
+                top: 170;
+                right: -224;
+                transform: rotate(90deg);
+                transform-origin: bottom left;
+            }
+  
+            #vertstyle2 {
+                position : absolute;
+                top: 13px;
+                left: 13px;
+                border-color: #d4af37;
+                width: 47.8%;
+                transform: rotate(90deg);
+                transform-origin: top left  ;
+            }
+
+            #angled {
+                position: absolute;
+                top: 88.5;
+                left: 491;
+                border-bottom: 0px solid #915f6d;
+                width: 37;
+                transform: rotate(-28deg);
+                transform-origin: top left  ;
+            }
+
+            #tfd {
+                color:#d4af37;
+                font-size: 25px;
+                position: absolute;
+                top: 408;
+                right: 202;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                transform: rotate(-90deg);
+                transform-origin: bottom left;
+            }
+
+            .triangle-right {
+                position: absolute;
+                top: 40;
+                left: 488;
+                height: 20px;
+                width: 40px;
+                border-top: 20px solid transparent;
+                border-bottom: 20px solid transparent;
+                border-left: 40px solid #915f6d;
+                border-right: 0px solid transparent;
+                background-color: black;
+            }
+
+            button.taskbar {
+                position : absolute;
+                bottom : 35;
+                background-color: #915f6d;
+                font-weight: lighter;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                float: left;
+                width: 300px;
+                height: 50px;
+                text-align: center;
+            }
+
+
+            button#home {
+                left: 40;
+                padding-left: 110px;
+            }
+
+            button#account {
+                left: 355;
+                padding-left: 85px;
+            }
+
+            button#cart {
+                left: 670;
+                padding-left: 110px;
+            }
+
+            button#logout {
+                right: 80;
+                padding-left: 95px;
+            }
+
+            button#home :hover {
+                background-color: white;
+                color: #915f6d;
+            }
+
+            button#account :hover {
+                background-color: white;
+                color: #915f6d;
+            }
+
+            button#cart :hover {
+                background-color: white;
+                color: #915f6d;
+            }
+
+            button#logout :hover {
+                background-color: white;
+                color: #915f6d;
+            }
+
+            button.taskbar a {
+                display: block;
+                text-decoration: none;
+                text-align: center;
+                color: white;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 25px;
+                background-color: #915f6d;
+                font-weight: lighter;
+                width: 295;
+                height: 44;
+                border-radius: 10px;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                padding-top: 8px;
+            }
+
+            .restaurantlist1{
+                border-radius: 10px;
+                position: absolute;
+                top: 150;
+            }
+
+            .restaurantlist2{
+                border-radius: 10px;
+                position: absolute;
+                top: 380;
+
+            }
+            .featuredlist1{
+                position: absolute;
+                right: -20;
+                top: 200;
+                border-radius: 50px;
+            }
+
+            .featuredlist2{
+                position: absolute;
+                right: -20;
+                top: 370;
+                border-radius: 50px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id = "toprest">
+            TOP RESTAURANTS FOR YOU
+            <div class="triangle-right"></div>
+            <hr id = "horiz">
+            <hr id = "angled">
+        </div>
+        <button class = "taskbar" id = "home" ><a href = "" style="background-color: white; color: #915f6d;"> h o m e </a></button>
+        <button class = "taskbar" id = "account"><a href = "foodfoxaccount.html"> a c c o u n t </a></button>
+        <button class = "taskbar" id = "cart"><a href = "foodfoxcart.html"> c a r t </a></button>
+        <button class = "taskbar" id = "logout"><a href = "foodfoxlogin.html"> l o g   o u t </a></button>
+        <img style = "float: right" id = "logo" src = "images/logo.png" height = "125px" />
+        <hr id="horzstyle1">
+        <hr id = "vertstyle1">
+        <hr id="horzstyle2">
+        <hr id = "vertstyle2">
+
+        <div id="restaurants">
+            <button class="restaurantlist1" id="r1" style = "left: 100">
+                <a href="foodfoxr1.html">
+                    <img src = "images/pizzahut.png" height = "160px" />
+                    <hr id = "test1">
+                    <hr id = "test2">
+                    <hr id = "test3">
+                    <hr id = "test4">
+                </a>
+            </button>
+            <button class="restaurantlist1" id="r2" style = "left: 350">
+                <a href="foodfoxr2.html">
+                    <img src = "images/uppercrust.png" height = "160px" /> 
+                    <hr id = "test1">
+                    <hr id = "test2"> 
+                    <hr id = "test3">
+                    <hr id = "test4">
+                </a> 
+            </button>
+            <button class="restaurantlist1" id="r3" style = "left: 600">
+                <a href="foodfoxr3.html">
+                    <img src = "images/ramees.png" height = "160px" />
+                    <hr id = "test1">
+                    <hr id = "test2">
+                    <hr id = "test3">
+                    <hr id = "test4">
+                </a>
+            </button>
+            <button class="restaurantlist2" id="r4" style = "left: 100">
+                <a href="foodfoxr4.html">
+                    <img src = "images/altaza.png" height = "160px" />
+                    <hr id = "test1">
+                    <hr id = "test2">
+                    <hr id = "test3">
+                    <hr id = "test4">
+                </a>
+            </button>
+            <button class="restaurantlist2" id="r5" style = "left: 350">
+                <a href="foodfoxr5.html">
+                    <img src = "images/kfc.png" height = "160px" />
+                    <hr id = "test1">
+                    <hr id = "test2">
+                    <hr id = "test3">
+                    <hr id = "test4">
+                </a>
+            </button>
+            <button class="restaurantlist2" id="r6" style = "left: 600">
+                <a href="foodfoxr6.html">
+                    <img src = "images/qahwa.png" height = "160px" />
+                    <hr id = "test1">
+                    <hr id = "test2">
+                    <hr id = "test3">
+                    <hr id = "test4">
+                </a>
+            </button>
+        </div>
+
+        <div id = "featured">
+            <div id="tfd">Today's Featured Dishes</div>
+            <button class = "featuredlist1" id="f1" style = "right: 310">
+                <a href="foodfoxr1.html">
+                    <img src = "images/pizza.png" height = "120px" /> 
+                </a>
+            </button>
+            <button class = "featuredlist2" id="f2" style = "right: 310">
+                <a href="foodfoxr5.html">
+                    <img src = "images/burger.png" height = "120px" /> 
+                </a>
+            </button>
+            <button class = "featuredlist1" id="f3" style = "right: 140">
+                <a href="foodfoxr3.html">
+                    <img src = "images/biriyani.png" height = "120px" /> 
+                </a>
+            </button>
+            <button class = "featuredlist2" id="f4" style = "right: 140">
+                <a href="foodfoxr6.html">
+                    <img src = "images/tandoori.png" height = "120px" /> 
+                </a>
+            </button>
+            <hr id = "bbox">
+            <hr id = "rbox">
+            <hr id = "lbox">
+            <hr id = "tbox">
+            <hr id = "rshadow">
+            <hr id = "bshadow">
+            
+
+        </div>
+
+    </body>
+</html>
